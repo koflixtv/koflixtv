@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuflix TV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="nav-links">
+            <a href="index.html" id="nav-home">Home</a>
+            <a href="#" id="nav-tv-shows">TV Shows</a>
+            <a href="#" id="nav-movies">Movies</a>
+        </nav>
+        <a href="index.html" class="logo">Kuflix TV</a>
+        <div class="header-right">
+            <div class="language-selector">
+                <select id="language" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="ku">Kurdish</option>
+                </select>
+            </div>
+            <a href="contact.html" class="contact-button">Contact Us</a>
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1 id="hero-title">Unlimited Movies, TV Shows, and More</h1>
+        <p id="hero-subtitle">Watch anywhere. Cancel anytime.</p>
+        <button id="hero-button">Get Started</button>
+        <div class="auth-section">
+            <p id="auth-subtitle">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="auth-buttons">
+                <input type="email" id="auth-email" placeholder="Email address">
+                <a href="signup.html" id="auth-get-started">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="categories">
+        <h2 id="trending-title">Trending Now</h2>
+        <button class="scroll-button left" onclick="scrollCategory('left', 'trending')">&#10094;</button>
+        <button class="scroll-button right" onclick="scrollCategory('right', 'trending')">&#10095;</button>
+        <div class="category" id="trending">
+            <img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="Movie 1">
+            <img src="https://image.tmdb.org/t/p/w500/1Lh9LER4xRQ3INFFi2dfS2hpRwv.jpg" alt="Movie 2">
+            <img src="https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg" alt="Movie 3">
+            <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Movie 4">
+            <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie 5">
+            <img src="https://image.tmdb.org/t/p/w500/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg" alt="Movie 6">
+            <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Movie 7">
+            <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Movie 8">
+            <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Movie 9">
+            <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie 10">
+        </div>
+    </div>
+
+    <div class="categories">
+        <h2 id="top-picks-title">Top Picks for You</h2>
+        <button class="scroll-button left" onclick="scrollCategory('left', 'top-picks')">&#10094;</button>
+        <button class="scroll-button right" onclick="scrollCategory('right', 'top-picks')">&#10095;</button>
+        <div class="category" id="top-picks">
+            <img src="https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg" alt="Movie 1">
+            <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Movie 2">
+            <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie 3">
+            <img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="Movie 4">
+            <img src="https://image.tmdb.org/t/p/w500/1Lh9LER4xRQ3INFFi2dfS2hpRwv.jpg" alt="Movie 5">
+            <img src="https://image.tmdb.org/t/p/w500/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg" alt="Movie 6">
+            <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Movie 7">
+            <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Movie 8">
+            <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Movie 9">
+            <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie 10">
+        </div>
+    </div>
+
+    <div class="categories">
+        <h2 id="new-releases-title">New Releases</h2>
+        <button class="scroll-button left" onclick="scrollCategory('left', 'new-releases')">&#10094;</button>
+        <button class="scroll-button right" onclick="scrollCategory('right', 'new-releases')">&#10095;</button>
+        <div class="category" id="new-releases">
+            <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie 1">
+            <img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" alt="Movie 2">
+            <img src="https://image.tmdb.org/t/p/w500/1Lh9LER4xRQ3INFFi2dfS2hpRwv.jpg" alt="Movie 3">
+            <img src="https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg" alt="Movie 4">
+            <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Movie 5">
+            <img src="https://image.tmdb.org/t/p/w500/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg" alt="Movie 6">
+            <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Movie 7">
+            <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Movie 8">
+            <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Movie 9">
+            <img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Movie 10">
+        </div>
+    </div>
+
+    <div class="reasons-section">
+        <h2 id="reasons-title">More Reasons to Join</h2>
+        <div class="reasons-container">
+            <div class="reason">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="TV">
+                <h3 id="reason1-title">Enjoy on your TV</h3>
+                <p id="reason1-description">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+            <div class="reason">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="Download">
+                <h3 id="reason2-title">Download your shows to watch offline</h3>
+                <p id="reason2-description">Save your favorites easily and always have something to watch.</p>
+            </div>
+            <div class="reason">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="Watch Everywhere">
+                <h3 id="reason3-title">Watch everywhere</h3>
+                <p id="reason3-description">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <!-- Removed FAQ, Help Center, Terms of Use, and Privacy links -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
